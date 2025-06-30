@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - JB Wood & Aluminium Works</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filter-buttons {
+      text-align: center;
+      margin: 20px;
+    }
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #444;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .filter-buttons .active {
+      background-color: #f39c12;
+    }
+
+    .gallery-category {
+      display: none;
+    }
+    .gallery-category.active {
+      display: block;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.9);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    #lightbox #close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    #controls button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">JB Wood & Aluminium Works</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <!--<a href="service.html" class="active">Services</a>-->
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="newwood">Newwood Models</button>
+    <button class="filter-btn" data-category="lam">Lam Models</button>
+    <button class="filter-btn" data-category="sunglass">Sunglass Models</button>
+    <button class="filter-btn" data-category="office">Carts & Doors</button>
+    <button class="filter-btn" data-category="tv">TV Units</button>
+  </div>
+
+  <!-- Service Categories -->
+  <section class="gallery-section">
+    <div class="gallery-category active" data-cat="lam">
+      <h3>Lam Models</h3>
+      <div class="gallery-grid">
+       
+        <img src="images/Lam6.jpeg" alt="Lam 2">
+        <img src="images/Lam7.jpeg" alt="Lam 1">
+        <img src="images/Lam8.jpeg" alt="Lam 2">
+         <img src="images/Lam9.jpeg" alt="Lam 2">
+        <img src="images/Lam10.jpeg" alt="Lam 1">
+        <img src="images/Lam11.jpeg" alt="Lam 2">
+        <img src="images/Lam12.jpeg" alt="Lam 1">
+        <img src="images/Lam13.jpeg" alt="Lam 2">
+        <img src="images/Lam14.jpeg" alt="Lam 1">
+         <img src="images/LAM1.jpeg" alt="Lam 1">
+        <img src="images/LAM2.jpeg" alt="Lam 2">
+        <img src="images/LAM3.jpeg" alt="Lam 1">
+        <img src="images/LAM4.jpeg" alt="Lam 2">
+        <img src="images/Lam5.jpeg" alt="Lam 1">
+        
+      </div>
+    </div>
+
+    <div class="gallery-category" data-cat="newwood">
+      <h3>Newwood Models</h3>
+      <div class="gallery-grid">
+        
+        <img src="images/New2.jpeg" alt="Newwood 2">
+        <img src="images/New3.jpeg" alt="Newwood 2">
+        <img src="images/New4.jpeg" alt="Newwood 2">
+        <img src="images/New5.jpeg" alt="Newwood 2">
+        <img src="images/New6.jpeg" alt="Newwood 2">
+        <img src="images/New7.jpeg" alt="Newwood 2">
+        <img src="images/New8.jpeg" alt="Newwood 2">
+        <img src="images/New9.jpeg" alt="Newwood 2">
+        <img src="images/New10.jpeg" alt="Newwood 2">
+        <img src="images/New11.jpeg" alt="Newwood 2">
+        <img src="images/New12.jpeg" alt="Newwood 2">
+        <img src="images/New13.jpeg" alt="Newwood 2">
+        <img src="images/New14.jpeg" alt="Newwood 2">
+        <img src="images/New15.jpeg" alt="Newwood 2">
+        <img src="images/New16.jpeg" alt="Newwood 2">
+        <img src="images/New17.jpeg" alt="Newwood 2">
+        <img src="images/New18.jpeg" alt="Newwood 2">
+        <img src="images/New19.jpeg" alt="Newwood 2">
+        <img src="images/New20.jpeg" alt="Newwood 2">
+        <img src="images/New21.jpeg" alt="Newwood 2">
+        <img src="images/New22.jpeg" alt="Newwood 2">
+        <img src="images/New23.jpeg" alt="Newwood 2">
+        <img src="images/New24.jpeg" alt="Newwood 2">
+        <img src="images/New25.jpeg" alt="Newwood 2">
+        <img src="images/New26.jpeg" alt="Newwood 2">
+        <img src="images/New27.jpeg" alt="Newwood 2">
+        <img src="images/New28.jpeg" alt="Newwood 2">
+        <img src="images/New29.jpeg" alt="Newwood 2">
+        <img src="images/New30.jpeg" alt="Newwood 2">
+         <img src="images/New31.jpeg" alt="Newwood 2">
+          <img src="images/New32.jpeg" alt="Newwood 2">
+           <img src="images/New33.jpeg" alt="Newwood 2">
+            <img src="images/New34.jpeg" alt="Newwood 2">
+             <img src="images/New35.jpeg" alt="Newwood 2">
+              <img src="images/New36.jpeg" alt="Newwood 2">
+               <img src="images/New37.jpeg" alt="Newwood 2">
+                <img src="images/New38.jpeg" alt="Newwood 2">
+                 <img src="images/New39.jpeg" alt="Newwood 2">
+                 <img src="images/New.jpeg" alt="Newwood 1">
+        <img src="images/New1.jpeg" alt="Newwood 2">
+      </div>
+    </div>
+
+    <div class="gallery-category" data-cat="sunglass">
+      <h3>Sunglass Models</h3>
+      <div class="gallery-grid">
+        <img src="images/Sun1.jpeg" alt="Sunglass 1">
+        <img src="images/sun2.jpeg" alt="Sunglass 2">
+        <img src="images/Sun3.jpeg" alt="Sunglass 1">
+        <img src="images/sun4.jpeg" alt="Sunglass 2">
+        <img src="images/Work1.jpeg" alt="Sunglass 1">
+        <img src="images/Work2.jpeg" alt="Sunglass 2">
+        <img src="images/Work4.jpeg" alt="Sunglass 1">
+        <img src="images/Work6.jpeg" alt="Sunglass 2">
+ 
+      </div>
+    </div>
+
+    <div class="gallery-category" data-cat="office">
+      <h3> Carts </h3>
+      <div class="gallery-grid">
+        <img src="images/cart1.webp" alt="Office 1">
+        <img src="images/cart2.jpg" alt="Office 2">
+        <img src="images/cart3.jpg" alt="Office 1">
+        <img src="images/cart4.jpg" alt="Office 2">
+        <img src="images/cart5.jpeg" alt="Office 1">
+        <img src="images/cart7.jpg" alt="Office 2">
+        <img src="images/cart9.jpg" alt="Office 2">
+        <img src="images/Door1.jpeg" alt="Office 2">
+        <img src="images/Door2.jpeg" alt="Office 2">
+        <img src="images/Door3.jpeg" alt="Office 2">
+        <img src="images/Door4.jpeg" alt="Office 2">
+        <img src="images/Door5.jpeg" alt="Office 2">
+        <img src="images/Door6.jpeg" alt="Office 2">
+        <img src="images/Door7.jpeg" alt="Office 2">
+        <img src="images/Door8.jpeg" alt="Office 2">
+        <img src="images/Door9.jpeg" alt="Office 2">
+        <img src="images/Door10.jpeg" alt="Office 2">
+        <img src="images/Door11.jpeg" alt="Office 2">
+        <img src="images/Alumin_1.jpeg" alt="Office 2">
+        <img src="images/Alumin_2.webp" alt="Office 2">
+        <img src="images/Alumin_3.jpeg" alt="Office 2">
+        <img src="images/Alumin_4.jpeg" alt="Office 2">
+
+      </div>
+    </div>
+
+    <div class="gallery-category" data-cat="tv">
+      <h3>TV Units</h3>
+      <div class="gallery-grid">
+        <img src="images/tv1.jfif" alt="TV 1">
+        <img src="images/tv2.jfif" alt="TV 2">
+        <img src="images/tv3.jpg" alt="TV 1">
+        <img src="images/TV3.jpeg" alt="TV 2">
+        <img src="images/TV4.jpeg" alt="TV 1">
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+    <div id="controls">
+      <button id="prev">⟨</button>
+      <button id="next">⟩</button>
+    </div>
+  </div>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleries = document.querySelectorAll('.gallery-category');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.category;
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        galleries.forEach(gallery => {
+          gallery.classList.toggle('active', cat === 'all' || gallery.dataset.cat === cat);
+        });
+      });
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImgs = document.querySelectorAll('.gallery-grid img');
+    const closeBtn = document.getElementById('close');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    let currentImgIndex = 0;
+    let imagesArray = [];
+
+    galleryImgs.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        imagesArray = [...img.closest('.gallery-grid').querySelectorAll('img')];
+        currentImgIndex = imagesArray.indexOf(img);
+        openLightbox(imagesArray[currentImgIndex].src);
+      });
+    });
+
+    function openLightbox(src) {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = src;
+    }
+
+    closeBtn.onclick = () => lightbox.style.display = 'none';
+
+    nextBtn.onclick = () => {
+      currentImgIndex = (currentImgIndex + 1) % imagesArray.length;
+      openLightbox(imagesArray[currentImgIndex].src);
+    };
+
+    prevBtn.onclick = () => {
+      currentImgIndex = (currentImgIndex - 1 + imagesArray.length) % imagesArray.length;
+      openLightbox(imagesArray[currentImgIndex].src);
+    };
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2>JB Wood & Aluminium Works</h2>
+        <img src="images/work2.jpeg" alt="Room" class="footer-image">
+      </div>
+      <div class="footer-column">
+        <h2>OUR ADDRESS</h2>
+        <p>Piduguralla<br>Palnadu District, Andhra Pradesh (AP) - 522413</p>
+        <p>📞 +91-9515782916</p>
+        <p>🌐 <a href="#" style="color:yellow;">www.JBWoodWorks.com</a></p>
+      </div>
+      <div class="footer-column">
+        <h2>CONTACT US FOR</h2>
+        <p>All Wood Work</p>
+        <p>All Aluminium_Work</p>
+        <p>Modular Kitchen</p>
+        <p>Office Furniture</p>
+      </div>
+    </div>
+  </footer>
+  <footer class="footer">
+    <p>© 2025 JB Wood & Aluminium Works. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

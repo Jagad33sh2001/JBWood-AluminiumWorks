@@ -1,0 +1,191 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WoodCraft | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">JB Wood & Aluminium Works</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+     <!-- <div class="dropdown">
+  <a href="service.html" class="dropbtn">Services ▾</a>
+  <div class="dropdown-content">
+    <a href="#">Lam Models</a>
+    <a href="#">Newwood Models</a>
+    <a href="#">Sunglass</a>
+    <a href="#">Office Tables</a>
+    <a href="#">TV Units</a>
+  </div>
+</div> -->
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slides">
+      <img src="images/slide1.webp" alt="Slide 1" class="slide active">
+      <img src="images/slide2" alt="Slide 2" class="slide">
+      <img src="images/slide3.jfif" alt="Slide 3" class="slide">
+    </div>
+    <div class="slider-content">
+      <h1>Beautiful Custom Woodwork</h1>
+      <p>Tailored furniture and interiors handcrafted with perfection.</p>
+      <a href="gallery.html" class="btn">View Our Work</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<section class="features">
+  <div class="feature-card" onclick="showGallery('kitchen')">
+    <div class="feature-icon">🍽️</div>
+    <h3>Modular Kitchens</h3>
+    <p>Elegant, optimized designs made from premium wood.</p>
+    <p><strong>For Images Click Here</strong></p>
+  </div>
+
+  <div class="feature-card" onclick="showGallery('wardrobe')">
+    <div class="feature-icon">🚪</div>
+    <h3>Wardrobes</h3>
+    <p>Space-saving sliding & hinged wardrobes with style.</p>
+    <p><strong>For Images Click Here</strong></p>
+  </div>
+
+  <div class="feature-card" onclick="showGallery('tvunit')">
+    <div class="feature-icon">📺</div>
+    <h3>TV Units & Shelves</h3>
+    <p>Crafted to blend seamlessly with your living room.</p>
+    <p><strong>For Images Click Here</strong></p>
+  </div>
+</section>
+
+<!-- Gallery Container -->
+<section class="gallery-scroll hidden" id="gallery-scroll">
+  <div id="gallery-images"></div>
+</section>
+
+<div id="lightbox" class="lightbox hidden">
+  <span onclick="closeLightbox()" class="close-btn">×</span>
+  <img id="lightbox-img" src="" alt="Zoomed image">
+</div>
+<!-- Lightbox for Fullscreen Image 
+<div id="lightbox" class="lightbox hidden">
+  <span class="close-btn" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="" alt="Zoomed Image">
+</div-->
+
+
+<!-- Lightbox Container -->
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img">
+  <div id="controls">
+    <button id="prev">⟨</button>
+    <button id="next">⟩</button>
+  </div>
+</div>
+
+ <section class="materials-quality-section">
+  <h2 style="text-align:center; margin-bottom: 40px;">Materials & Quality That Lasts a Lifetime</h2>
+
+  <!-- Row 1 -->
+  <div class="material-row">
+    <div class="material-image hover-zoom">
+      <img src="images/HDHMR20Board-jpg.webp" alt="Action Tesa Sheet">
+    </div>
+    <div class="material-text">
+      <h3>Premium Action Tesa Sheets</h3>
+      <p>We use only genuine top-grade Action Tesa sheets in our Newwood models. These sheets are renowned for their superior durability, stylish finishes, and long-lasting performance — trusted by professionals across India.</p>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="material-row reverse">
+    <div class="material-text">
+      <h3>Stainless Steel Excellence</h3>
+      <p>All our hardware and internal fittings are made with rust-free stainless steel to ensure a longer lifespan. Our steel accessories offer unmatched strength, safety, and hygiene for your kitchen and wardrobe solutions.</p>
+    </div>
+    <div class="material-image hover-zoom">
+      <img src="images/SteelHings.jfif" alt="Stainless Steel Material">
+    </div>
+  </div>
+
+
+<!---<h2 style="text-align:center; margin-top: 40px;">Built to Perform, Designed to Impress</h2> --->
+
+    <!-- Row 3 -->
+    <div class="material-row">
+      <div class="material-image hover-zoom">
+        <img src="images/Gurjun_Plywood.jpg" alt="High-Grade Plywood">
+      </div>
+      <div class="material-text">
+        <h3>High-Grade Plywood for Endurance</h3>
+        <p>We use ISI-certified plywood that's treated for moisture resistance, termite protection, <br>
+          and extra strength. Every unit we build—be it wardrobes, modular kitchens, or partitions—uses plywood that’s<br>
+           built to last for decades, even in tough Indian weather conditions.</p>
+      </div>
+    </div>
+
+      <!-- Row 4 -->
+      <div class="material-row reverse">
+        <div class="material-text">
+          <h3>Smart & Spacious Kitchen Baskets</h3>
+          <p>Enhance your kitchen with our premium stainless steel baskets — designed for smooth sliding, <br>
+            ample space, and easy organization. From cutlery trays to thali and bottle baskets, <br>
+            our designs maximize utility while keeping your kitchen elegant and clutter-free.</p>
+        </div>
+        <div class="material-image hover-zoom">
+          <img src="images/Kitchen_baskets.webp" alt="Kitchen Baskets">
+        </div>
+      </div>
+
+      <!-- Row 5: Teak Reapers -->
+<div class="material-row">
+  <div class="material-image hover-zoom">
+    <img src="images/teak-Repears.jpeg" alt="Teak Reapers">
+  </div>
+  <div class="material-text">
+    <h3>Strength & Style with Teak Reapers</h3>
+    <p>We reinforce our furniture with seasoned teak reapers for unmatched structural integrity and natural beauty. Teak’s resistance to termites, moisture, and warping makes it the ideal backbone for long-lasting wooden works. Every frame is built to stay strong and stunning for years to come.</p>
+  </div>
+</div>
+
+</section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h2> JB Wood & Aluminium Works</h2>
+      <img src="images/Work2.jpeg" alt="Room" class="footer-image">
+    </div>
+    <div class="footer-column">
+      <h2>OUR ADDRESS</h2>
+      <p>Piduguralla<br>Palnadu District, Andhra Pradesh (AP) - 522413</p>
+      <p>📞 +91-9515782916</p>
+      <p>🌐 <a href="#" style="color:yellow;">www.JBWoodWorks.com</a></p>
+    </div>
+    <div class="footer-column">
+      <h2>CONTACT US FOR</h2>
+      <p>All Wood Work</p>
+      <p>All Aluminium_Work</p>
+      <p>Modular Kitchen</p>
+      <p>Office Furniture</p>
+    </div>
+  </div>
+</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 JB Wood & Aluminium Works. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
